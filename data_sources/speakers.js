@@ -1,6 +1,7 @@
 //wire up REST data source
 const { RESTDataSource } = require("apollo-datasource-rest")
 
+// this data source is layers on top of a REST API
 class SpeakerAPI extends RESTDataSource {
 	constructor() {
 		super()

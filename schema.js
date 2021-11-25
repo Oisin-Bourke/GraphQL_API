@@ -30,6 +30,7 @@ module.exports = gql`
 		format: String
 		track: String @deprecated(reason: "Not using this field...")
 		level: String
+		speakers: [Speaker]
 	}
 	type Speaker {
 		id: ID!
