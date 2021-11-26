@@ -22,6 +22,18 @@ class SessionAPI extends DataSource {
 	getSessionsFilterByAnyParam(args) {
 		return _.filter(sessions, args)
 	}
+
+	toggleFavSession(id) {
+		const session = _.filter(sessions, { id: parseInt(id) })
+		session[0].favorite = !session[0].favorite
+        return session[0]
+	}
+
+	updateSessionLevel(id, level) {
+		const session = _.filter(sessions, {id: parseInt(id)} )
+		session[0].level = level
+		return session[0]
+	}
 }
 
 module.exports = SessionAPI

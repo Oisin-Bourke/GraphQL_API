@@ -19,6 +19,10 @@ module.exports = gql`
 		speakers: [Speaker]
 		speakerById(id: ID): Speaker
 	}
+	type Mutation {
+		toggleFavSession(id: ID): Session
+		updateSessionLevel(id: ID level: String): Session
+	}
 	type Session {
 		id: ID!
 		title: String!
@@ -30,6 +34,7 @@ module.exports = gql`
 		format: String
 		track: String @deprecated(reason: "Not using this field...")
 		level: String
+		favorite: Boolean
 		speakers: [Speaker]
 	}
 	type Speaker {
