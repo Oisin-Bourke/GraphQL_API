@@ -34,6 +34,12 @@ class SessionAPI extends DataSource {
 		session[0].level = level
 		return session[0]
 	}
+
+	addNewSession(session) {
+		session.id = 12
+		sessions.push(session)
+		return session
+	}
 }
 
 module.exports = SessionAPI

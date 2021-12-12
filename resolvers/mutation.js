@@ -5,4 +5,7 @@ module.exports = {
 	updateSessionLevel: (parent, { id, level }, { dataSources }, info) => {
 		return dataSources.sessionAPI.updateSessionLevel(id, level)
 	},
+	addNewSession: (parent, {session}, {dataSources}, info) => {
+		return dataSources.sessionAPI.addNewSession(session)
+	}
 }
